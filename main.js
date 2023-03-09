@@ -40,15 +40,13 @@ const validateCred = (arr) => {
     console.log(`Total: ${total}`)
     }
     if (total % 10 === 0) {
-        console.log("True");
         return true;
       } else {
-        console.log("False");
         return false;
     }
 }
 
-validateCred(invalid5);
+console.log(validateCred(valid1));
 
 
 
