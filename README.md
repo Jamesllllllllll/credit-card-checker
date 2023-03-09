@@ -20,7 +20,7 @@ I mistakenly used `if ((i % 2) === 0)` to check if the index was an even number,
 
 ***
 
-## Next Steps:
+### Next Steps:
 
 1. Create findInvalidCards() that looks through an array of card numbers and returns an array of invalid card numbers.
 2. Create idInvalidCardCompanies() that returns which companies are issuing invalid numbers.
