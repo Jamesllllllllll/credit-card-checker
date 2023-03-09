@@ -12,7 +12,7 @@ for (let i = items.length - 1; i >= 0; i -= 1) {
 }
 ```
 
-I wrote my own statements to multiply every other number by 2, and subtract 9 if the result was greater than 9.
+I wrote my own `if` statements to multiply every other number by 2, and subtract 9 if the result was greater than 9.
 
 I mistakenly used `if ((i % 2) === 0)` to check if the index was an even number, but that caused a false positive with a credit card number with an uneven amount of numbers.
 
