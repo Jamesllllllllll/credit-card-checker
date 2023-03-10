@@ -35,9 +35,9 @@ idInvalidCardCompanies() was easier to solve. However, I suspect there is a way 
 
 ### Next Steps:
 
-1. [x] Create findInvalidCards() that looks through an array of card numbers and returns an array of invalid card numbers.
-2. [x] Create idInvalidCardCompanies() that returns which companies are issuing invalid numbers.
-3. [] Checking challenge project hints and getting a code review from the forums. (I solved this without checking the hints (or the Codecademy forums or Discord, for that matter))
+[x] Create findInvalidCards() that looks through an array of card numbers and returns an array of invalid card numbers.
+[x] Create idInvalidCardCompanies() that returns which companies are issuing invalid numbers.
+[] Checking challenge project hints and getting a code review from the forums. (I solved this without checking the hints (or the Codecademy forums or Discord, for that matter))
 
 ### Extra:
 
