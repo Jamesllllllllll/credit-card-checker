@@ -24,7 +24,7 @@ When creating findInvalidCards() that calls validateCred() - I realized that val
 
 The original strings seemed to be mutated when passing thru findInvalidCards(), but not when I went back and individually called them with validateCred(). I solved this by using `arr.slice()` to create a new array instead of let `tempArr = arr`. 
 
-I puzzled for a long time why findInvalidCards() was incorrectly calling invalid4 and most of the mystery arrays. I figured out that the `total` variable in validateCred was not being reset each time it was run with `findInvalidCards()`. I set it to 0 before returning `True` or `False`.
+I puzzled for a long time why findInvalidCards() was incorrectly declaring the array `invalid4` to be valid, and most of the mystery arrays were incorrect as well. I figured out that the `total` variable in validateCred() was not being reset each time it was run with `findInvalidCards()`. I set it to 0 before returning `True` or `False`.
 
 ***
 
