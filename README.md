@@ -32,9 +32,6 @@ idInvalidCardCompanies() was easier to solve. However, I suspect there is a way 
 
 ***
 
-I solved this without checking the hints (or the Codecademy forums or Discord, for that matter). 
-
-***
 
 ### Next Steps:
 
