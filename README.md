@@ -32,10 +32,15 @@ idInvalidCardCompanies() was easier to solve. However, I suspect there is a way 
 
 ***
 
+I solved this without checking the hints (or the Codecademy forums or Discord, for that matter). 
+
+***
+
 ### Next Steps:
 
 1. ~~Create findInvalidCards() that looks through an array of card numbers and returns an array of invalid card numbers.~~
 2. ~~Create idInvalidCardCompanies() that returns which companies are issuing invalid numbers.~~
+3. Checking challenge project hints and getting a code review from the forums. (I solved this without checking the hints (or the Codecademy forums or Discord, for that matter))
 
 ### Extra:
 
