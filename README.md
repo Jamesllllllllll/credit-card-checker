@@ -28,7 +28,7 @@ I puzzled for a long time why findInvalidCards() was incorrectly declaring the a
 
 ***
 
-idInvalidCardCompanies() was easier to solve. However, I suspect there is a way to make the code more concise.
+idInvalidCardCompanies() was easier to solve. However, I suspect there is a way to make the code more concise. (**Answer** - A switch statement!)
 
 ***
 
