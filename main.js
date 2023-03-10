@@ -33,17 +33,13 @@ let total = 0;
 const validateCred = (arr) => {
     let tempArr = arr.slice();
     for (let i = tempArr.length - 1, t = 1; i >= 0; i -= 1, t += 1) {
-        // console.log(`${i}. ${tempArr[i]}`);
         if ((t % 2) === 0) {
             tempArr[i] *= 2;
-            // console.log(`${i}. Multiplied by 2 = ${tempArr[i]}`);
             if (tempArr[i] > 9) {
                 tempArr[i] -= 9;
-                // console.log(`${i}. Subtract 9 = ${tempArr[i]}`);
             }
         }
         total = total + tempArr[i];
-        // console.log(`Total: ${total}\n`)
     }
     if (total % 10 === 0) {
         total = 0;
@@ -53,8 +49,6 @@ const validateCred = (arr) => {
         return false;
     }
 }
-
-// console.log(validateCred(mystery5));
 
 
 //
@@ -77,11 +71,6 @@ const findInvalidCards = (arr) => {
 
 
 console.log(findInvalidCards(batch));
-
-// console.log(invalidCards);
-
-
-// Mystery numbers: TRUE: 2, 5 - FALSE: 1, 3, 4
 
 
 //
@@ -122,6 +111,9 @@ const idInvalidCardCompanies = (arr) => {
             } else {
                 companies.push("Discover")
             }
+        }
+        if (card[0] <3 || card[0] >6) {
+            console.log(`Company not found: ${card.join("")}`);
         }
     }
 };
