@@ -29,8 +29,9 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 //
 // Function validateCred()
 
-let total = 0;
+
 const validateCred = (arr) => {
+    let total = 0;
     let tempArr = arr.slice();
     for (let i = tempArr.length - 1, t = 1; i >= 0; i -= 1, t += 1) {
         if ((t % 2) === 0) {
