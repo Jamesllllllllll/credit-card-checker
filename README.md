@@ -20,10 +20,22 @@ I mistakenly used `if ((i % 2) === 0)` to check if the index was an even number,
 
 ***
 
+When creating findInvalidCards() that calls validateCred() - I realized that validateCred() mutates the original array. I added a tempArr variable to store the calculations on the array indices.
+
+The original strings seemed to be mutated when passing thru findInvalidCards(), but not when I went back and individually called them with validateCred(). I solved this by using `arr.slice()` to create a new array instead of let `tempArr = arr`. 
+
+I puzzled for a long time why findInvalidCards() was incorrectly calling invalid4 and most of the mystery arrays. I figured out that the `total` variable in validateCred was not being reset each time it was run with `findInvalidCards()`. I set it to 0 before returning `True` or `False`.
+
+***
+
+idInvalidCardCompanies() was easier to solve. However, I suspect there is a way to make the code more concise.
+
+***
+
 ### Next Steps:
 
-1. Create findInvalidCards() that looks through an array of card numbers and returns an array of invalid card numbers.
-2. Create idInvalidCardCompanies() that returns which companies are issuing invalid numbers.
+1. ~~Create findInvalidCards() that looks through an array of card numbers and returns an array of invalid card numbers.~~
+2. ~~Create idInvalidCardCompanies() that returns which companies are issuing invalid numbers.~~
 
 ### Extra:
 

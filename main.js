@@ -24,30 +24,108 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 
 // Add your functions below:
+
+
+//
+// Function validateCred()
+
 let total = 0;
 const validateCred = (arr) => {
-    for (let i = arr.length - 1, t = 1; i >= 0; i -= 1, t += 1) {
-        console.log(`${i}. ${arr[i]}`);
+    let tempArr = arr.slice();
+    for (let i = tempArr.length - 1, t = 1; i >= 0; i -= 1, t += 1) {
+        // console.log(`${i}. ${tempArr[i]}`);
         if ((t % 2) === 0) {
-            arr[i] *= 2;
-            console.log(`${i}. Multiplied by 2: ${arr[i]}`);
-            if (arr[i] > 9) {
-                arr[i] -= 9;
-                console.log(`${i}. Subtract 9: ${arr[i]}`);
+            tempArr[i] *= 2;
+            // console.log(`${i}. Multiplied by 2 = ${tempArr[i]}`);
+            if (tempArr[i] > 9) {
+                tempArr[i] -= 9;
+                // console.log(`${i}. Subtract 9 = ${tempArr[i]}`);
             }
         }
-    total = total + arr[i];
-    console.log(`Total: ${total}`)
+        total = total + tempArr[i];
+        // console.log(`Total: ${total}\n`)
     }
     if (total % 10 === 0) {
+        total = 0;
         return true;
-      } else {
+    } else {
+        total = 0;
         return false;
     }
 }
 
-console.log(validateCred(valid1));
+// console.log(validateCred(mystery5));
 
 
+//
+// Function findInvalidCards()
+
+let invalidCards = [];
+let count = 0;
+const findInvalidCards = (arr) => {
+    for (const card of arr) {
+        count += 1;
+        console.log(card);
+            if (validateCred(card) === true) {
+            console.log(`${count}. Card Okay: ${card.join("")}\n`);
+        } else if (validateCred(card) === false) {
+            console.log(`${count}. Card INVALID: ${card.join("")}\n`);
+            invalidCards.push(card);
+        }
+    }
+}
 
 
+console.log(findInvalidCards(batch));
+
+// console.log(invalidCards);
+
+
+// Mystery numbers: TRUE: 2, 5 - FALSE: 1, 3, 4
+
+
+//
+/* Function idInvalidCardCompanies()
+
+First Digit     Company
+3 	            Amex (American Express)
+4 	            Visa
+5 	            Mastercard
+6 	            Discover
+
+*/
+
+const companies = [];
+const idInvalidCardCompanies = (arr) => {
+    console.log("\n\nCompanies issuing faulty cards:")
+    for (const card of arr) {
+        if (card[0] === 3) {
+            if (companies.includes("Amex")) {
+            } else {
+                companies.push("Amex")
+            }
+        }
+        if (card[0] === 4) {
+            if (companies.includes("Visa")) {
+            } else {
+                companies.push("Visa")
+            }
+        }
+        if (card[0] === 5) {
+            if (companies.includes("Mastercard")) {
+            } else {
+                companies.push("Mastercard")
+            }
+        }
+        if (card[0] === 6) {
+            if (companies.includes("Discover")) {
+            } else {
+                companies.push("Discover")
+            }
+        }
+    }
+};
+
+idInvalidCardCompanies(invalidCards);
+console.log(companies);
+console.log("\n\n");
