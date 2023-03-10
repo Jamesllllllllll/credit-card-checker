@@ -54,9 +54,9 @@ const validateCred = (arr) => {
 //
 // Function findInvalidCards()
 
-let invalidCards = [];
-let count = 0;
+const invalidCards = [];
 const findInvalidCards = (arr) => {
+    let count = 0;
     for (const card of arr) {
         count += 1;
         console.log(card);
